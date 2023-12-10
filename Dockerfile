@@ -44,7 +44,6 @@ RUN npm install -g semantic-release \
     semantic-release-license && \
     npm cache clean --force
 
-
 # Determine system architecture and download appropriate JDK
 # at this point we just use arm64 for macos and arm clusters and amd64 for x86 clusters and linux / windows devs
 RUN set -eux; \
