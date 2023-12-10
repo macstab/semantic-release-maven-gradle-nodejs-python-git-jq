@@ -1,0 +1,68 @@
+{
+  "branches": ["master"],
+  "plugins": [
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "angular",
+        "releaseRules": [
+          {"type": "docs", "scope":"README", "release": "patch"},
+          {"type": "chore", "release": "patch"},
+          {"type": "refactor", "release": "patch"},
+          {"type": "style", "release": "patch"},
+          {"type": "feat", "release": "minor"},
+          {"type": "fix", "release": "patch"},
+          {"type": "perf", "release": "patch"},
+          {"type": "revert", "release": "patch"},
+          {"type": "dependencies", "release": "patch"},
+          {"type": "security", "release": "minor"},
+          {"type": "breaking", "release": "major"}
+        ],
+        "parserOpts": {
+          "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
+        }
+      }
+    ],
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "preset": "angular",
+        "presetConfig": {
+          "types": [
+            {"type": "feat", "section": "🚀 Features"},
+            {"type": "fix", "section": "🐛 Bug Fixes"},
+            {"type": "chore", "section": "🧹 Chores"},
+            {"type": "docs", "section": "📚 Documentation"},
+            {"type": "style", "section": "💄 Styles"},
+            {"type": "refactor", "section": "🔨 Refactoring"},
+            {"type": "perf", "section": "⚡ Performance Improvements"},
+            {"type": "test", "section": "🧪 Tests"},
+            {"type": "build", "section": "🏗️ Build System"},
+            {"type": "ci", "section": "🚦 Continuous Integration"},
+            {"type": "revert", "section": "⏪ Reverts"},
+            {"type": "wip", "section": "🚧 Work In Progress"},
+            {"type": "breaking", "section": "💥 Breaking Changes"},
+            {"type": "dependencies", "section": "🔒 Dependency Updates"},
+            {"type": "security", "section": "🛡️ Security Fixes"}
+          ]
+        }
+      }
+    ],
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    "semantic-release-maven",
+    "@semantic-release/github",
+    [
+      "@semantic-release/git",
+      {
+        "assets": ["pom.xml", "CHANGELOG.md"],
+        "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
+      }
+    ],
+    "@saithodev/semantic-release-backmerge"
+  ]
+}
