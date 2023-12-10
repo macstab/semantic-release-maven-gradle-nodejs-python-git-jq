@@ -393,4 +393,13 @@ Each profile is tailored to suit the specific needs of different development env
     docker run your-docker-image semantic-release --config /configs/.releaserc-python.json 
   ```  
 
+### Profile for no build tools (i.e. docker images, configurations, infrastructure as code, etc.)
+
+- **Overview**: Configured for no build tool projects.
+- **Key Features**: Supports Releases and tags.
+- **Example Usage**:
+  ```shell
+    docker run your-docker-image semantic-release --config /configs/.releaserc-nobuild.json 
+  ```  
+
 This chapter provides a guide on how to use the predefined Semantic-Release profiles for different development environments and includes basic usage examples. You can further expand each section with more detailed information, specific customization guidelines, and additional examples as needed.
