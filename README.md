@@ -397,6 +397,7 @@ Each profile is tailored to suit the specific needs of different development env
 
 - **Overview**: Configured for no build tool projects.
 - **Key Features**: Supports Releases and tags.
+- **Comment**: The package json is just forconvinienve to run semantic-release. It is not used for release.
 - **Example Usage**:
   ```shell
     docker run your-docker-image semantic-release --config /configs/.releaserc-nobuild.json 
