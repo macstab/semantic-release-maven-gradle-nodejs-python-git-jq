@@ -14,6 +14,20 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+#      - name: Semantic Release
+#        uses: docker://macstab/semantic-release-maven-gradle-nodejs-python-git-jq:latest
+#        with:
+#          entrypoint: /bin/sh
+#          workdir: /home/runner/work/${{ github.repository }}/${{ github.repository }}
+#          branches: 'main'
+#          args: -c "cat /configs/$CONFIG_FILE && git config --global --add safe.directory /github/workspace && npx semantic-release --branches $RELEASE_BRANCH --config /configs/$CONFIG_FILE"
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+#          NODE_ENV: production
+#          GH_URL: https://github.com/${{ github.repository }}.git
+#          RELEASE_BRANCH: main
+#          CONFIG_FILE: .releaserc-nobuild.json
       - name: Set up Docker Build
         uses: docker/setup-buildx-action@v3
       - name: Login to DockerHub
@@ -35,9 +49,12 @@ jobs:
           entrypoint: /bin/sh
           workdir: /home/runner/work/${{ github.repository }}/${{ github.repository }}
           branches: 'main'
-          args: -c "git config --global --add safe.directory /github/workspace && npx semantic-release --branches $RELEASE_BRANCH --config /configs/.releaserc-nobuild.json"
+          args: -c "set -eux;export GITHUB_TOKEN="${ALTERNATE_GITHUB_TOKEN}";cp /configs/$CONFIG_FILE .releaserc;cat .releaserc && git config --global --add safe.directory /github/workspace && npx semantic-release --branches $RELEASE_BRANCH"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_ENV: production
           GH_URL: https://github.com/${{ github.repository }}.git
           RELEASE_BRANCH: main
+          CONFIG_FILE: .releaserc-nobuild.json
+          DEBUG: semantic-release:*
