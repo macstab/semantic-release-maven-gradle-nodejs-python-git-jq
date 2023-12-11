@@ -35,9 +35,10 @@ jobs:
           entrypoint: /bin/sh
           workdir: /home/runner/work/${{ github.repository }}/${{ github.repository }}
           branches: 'main'
-          args: -c "git config --global --add safe.directory /github/workspace && npx semantic-release --branches $RELEASE_BRANCH --config /configs/.releaserc-nobuild.json"
+          args: -c "echo 'test $NPM_TOKEN' && git config --global --add safe.directory /github/workspace && npx semantic-release --branches $RELEASE_BRANCH --config /configs/.releaserc-nobuild.json"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_ENV: production
           GH_URL: https://github.com/${{ github.repository }}.git
           RELEASE_BRANCH: main
