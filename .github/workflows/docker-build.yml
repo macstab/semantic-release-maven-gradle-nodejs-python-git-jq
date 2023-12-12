@@ -14,22 +14,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Semantic Release
-        uses: docker://macstab/semantic-release-maven-gradle-nodejs-python-git-jq:latest
         with:
-          entrypoint: /bin/sh
-          workdir: /home/runner/work/${{ github.repository }}/${{ github.repository }}
-          branches: 'main'
-          args: -c "echo $GITHUB_TOKEN | base64"
-        env:
-          GITHUB_TOKEN: ${{ secrets.ALTERNATE_GITHUB_TOKEN }}
-          #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_ENV: production
-          GH_URL: https://github.com/${{ github.repository }}.git
-          RELEASE_BRANCH: main
-          CONFIG_FILE: .releaserc-nobuild.json
-          DEBUG: semantic-release:*
+          persist-credentials: false
       - name: Set up Docker Build
         uses: docker/setup-buildx-action@v3
       - name: Login to DockerHub
@@ -44,7 +30,16 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: macstab/semantic-release-maven-gradle-nodejs-python-git-jq:latest
+      - name: test token
+        uses: docker://macstab/semantic-release-maven-gradle-nodejs-python-git-jq:latest
+        with:
+          entrypoint: /bin/sh
+          args: -c "echo ${{ env.GITHUB_TOKEN }} | base64"
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN }}
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.BOT_GITHUB_TOKEN }}
       - name: Semantic Release
         uses: docker://macstab/semantic-release-maven-gradle-nodejs-python-git-jq:latest
         with:
@@ -53,11 +48,10 @@ jobs:
           branches: 'main'
           args: -c "cp /configs/$CONFIG_FILE .releaserc && git config --global --add safe.directory /github/workspace && npx semantic-release --branches $RELEASE_BRANCH"
         env:
-          GITHUB_TOKEN: ${{ secrets.ALTERNATE_GITHUB_TOKEN }}
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_ENV: production
           GH_URL: https://github.com/${{ github.repository }}.git
           RELEASE_BRANCH: main
-          CONFIG_FILE: .releaserc-nobuild.json
+          CONFIG_FILE: .releaserc-docker.json
           DEBUG: semantic-release:*

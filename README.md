@@ -14,10 +14,7 @@ One of the key features of this Docker image is its support for custom configura
 
 These configurations are accessible and modifiable, providing users with the flexibility to adapt the image to their specific project needs. This capability significantly simplifies the process of setting up and managing project-specific release workflows.
 
-
 ---
-
-
 
 # Chapter 2: Dependencies, Packages, and Versions
 
@@ -27,12 +24,12 @@ The base image `macstab/node-python-git-jq-bookworm:latest` is built on Debian B
 
 ### Core Components
 
-| Component | Version | Description |
-|-----------|---------|-------------|
-| Node.js   | 21.4.0  | JavaScript runtime environment. [Node.js](https://nodejs.org/) |
+| Component | Version | Description                                                           |
+|-----------|---------|-----------------------------------------------------------------------|
+| Node.js   | 21.4.0  | JavaScript runtime environment. [Node.js](https://nodejs.org/)        |
 | Python    | 3.12.0  | Programming language for scripting. [Python](https://www.python.org/) |
-| Git       | 2.42.0  | Version control system. [Git](https://git-scm.com/) |
-| JQ        | 1.8     | Command-line JSON processor. [JQ](https://stedolan.github.io/jq/) |
+| Git       | 2.42.0  | Version control system. [Git](https://git-scm.com/)                   |
+| JQ        | 1.8     | Command-line JSON processor. [JQ](https://stedolan.github.io/jq/)     |
 
 *Note: Replace `[version]` with the specific versions included in the Docker image.*
 
@@ -42,11 +39,11 @@ The image also includes additional tools to support a wide range of development 
 
 ### Additional Tools
 
-| Tool      | Version | Description |
-|-----------|---------|-------------|
+| Tool      | Version | Description                                                                 |
+|-----------|---------|-----------------------------------------------------------------------------|
 | Java      | 21      | Programming language for Java-based projects. [Java](https://www.java.com/) |
 | Maven     | 3.9.6   | Build automation tool for Java projects. [Maven](https://maven.apache.org/) |
-| Gradle    | 8.5     | Build tool for Java projects. [Gradle](https://gradle.org/) |
+| Gradle    | 8.5     | Build tool for Java projects. [Gradle](https://gradle.org/)                 |
 
 *Note: Replace `[version]` with the actual versions included in the Docker image.*
 
@@ -400,7 +397,7 @@ Each profile is tailored to suit the specific needs of different development env
 - **Comment**: The package json is just forconvinienve to run semantic-release. It is not used for release.
 - **Example Usage**:
   ```shell
-    docker run your-docker-image semantic-release --config /configs/.releaserc-nobuild.json 
+    docker run your-docker-image semantic-release --config /configs/.releaserc-docker.json 
   ```  
 
 This chapter provides a guide on how to use the predefined Semantic-Release profiles for different development environments and includes basic usage examples. You can further expand each section with more detailed information, specific customization guidelines, and additional examples as needed.
