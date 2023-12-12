@@ -81,6 +81,7 @@ RUN set -eux; \
 
 COPY configs/ /configs/
 
+# Install maven and gradle
 RUN echo Verifying install ... \
     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java \
     && echo javac --version && javac --version \
