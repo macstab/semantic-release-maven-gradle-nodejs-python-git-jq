@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.5.0...v1.6.0) (2024-01-01)
+
+
+### Features
+
+* removed backmerge by using external github action to merge main branch into develop ([47ddfeb](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/47ddfeb2e3668c9fac5ca7c54a253d07e1b72f50))
+
 # [1.5.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.4.0...v1.5.0) (2024-01-01)
 
 
