@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.1.0...v1.2.0) (2024-01-01)
+
+
+### Features
+
+* include the docker image version keeper by a npm package.json file for the backmerge. ([dcc5bba](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/dcc5bba3c4040d4302f5f090b3bd59b165312dcf))
+
 # [1.1.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.0.0...v1.1.0) (2024-01-01)
 
 
