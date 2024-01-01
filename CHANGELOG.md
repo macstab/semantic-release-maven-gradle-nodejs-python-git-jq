@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.3.0...v1.4.0) (2024-01-01)
+
+
+### Features
+
+* add concurrency for workflows ([#10](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/issues/10)) ([68abec6](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/68abec6e182de3b3a65fcfc1c7960499013310b3))
+
 # [1.3.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.2.0...v1.3.0) (2024-01-01)
 
 
