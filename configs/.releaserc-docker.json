@@ -68,12 +68,12 @@
         "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
       }
     ],
-    "@saithodev/semantic-release-backmerge",
     [
-      "@semantic-release/npm",
+      "@semantic-release/exec",
       {
-        "npmPublish": false
+        "prepareCmd": "git fetch --all && git reset --hard origin/main"
       }
-    ]
+    ],
+    "@saithodev/semantic-release-backmerge"
   ]
 }
