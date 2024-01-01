@@ -1,3 +1,5 @@
+## [1.6.2](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.6.1...v1.6.2) (2024-01-01)
+
 ## [1.6.1](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.6.0...v1.6.1) (2024-01-01)
 
 
