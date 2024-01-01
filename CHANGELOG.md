@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.2.0...v1.3.0) (2024-01-01)
+
+
+### Features
+
+* add npm version change on npm in release phase as well. ([#9](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/issues/9)) ([4230800](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/4230800c8b95b23dc0e6f52cf7df2351ac16a828))
+
 # [1.2.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.1.0...v1.2.0) (2024-01-01)
 
 
