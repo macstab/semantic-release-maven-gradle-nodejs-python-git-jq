@@ -61,6 +61,13 @@ jobs:
           route: GET /repos/${{ github.repository }}/releases/latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: merge back to develop
+        uses: devmasx/merge-branch@v1.4.0
+        with:
+          from_branch: 'main'
+          target_branch: 'develop'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          message: 'chore(release): ${{ fromJson(steps.latest_release.outputs.data).tag_name }} merge main to develop'
       - name: Build and push docker image
         uses: docker/build-push-action@v5
         with:
