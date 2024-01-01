@@ -61,13 +61,15 @@ jobs:
           route: GET /repos/${{ github.repository }}/releases/latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: merge back to develop
-        uses: devmasx/merge-branch@v1.4.0
+      - name: merge main -> develop
+        uses: docker://macstab/semantic-release-maven-gradle-nodejs-python-git-jq:latest
         with:
-          from_branch: 'main'
-          target_branch: 'develop'
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          message: 'chore(release): ${{ fromJson(steps.latest_release.outputs.data).tag_name }} merge main to develop'
+          entrypoint: /bin/sh
+          workdir: /home/runner/work/${{ github.repository }}/${{ github.repository }}
+          args: "-c \"set -x && git config --global --add safe.directory /github/workspace && git config --global user.email '${{ secrets.BOT_USER_EMAIL }}' && git config --global user.name '${{ secrets.BOT_USER_NAME }}' && git fetch -a origin && git checkout ${INPUT_TARGET_BRANCH} && git pull && git merge --no-ff -m 'chore(release): ${{ fromJson(steps.latest_release.outputs.data).tag_name }} merge main to develop' ${INPUT_FROM_BRANCH} && git push\""
+        env:
+          INPUT_FROM_BRANCH: 'main'
+          INPUT_TARGET_BRANCH: 'develop'
       - name: Build and push docker image
         uses: docker/build-push-action@v5
         with:
