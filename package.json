@@ -1,6 +1,6 @@
 {
   "name": "semantic-release-github",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "Docker image to publish releases to GitHub with semantic-release",
   "repository": {
     "type": "git",
