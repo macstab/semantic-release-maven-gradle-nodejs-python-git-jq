@@ -77,10 +77,3 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: macstab/semantic-release-maven-gradle-nodejs-python-git-jq:${{ fromJson(steps.latest_release.outputs.data).tag_name }}
-#      - name: Build and push docker image
-#          uses: docker/build-push-action@v5
-#          with:
-#            context: .
-#            file: ./Dockerfile
-#            push: true
-#            tags: macstab/semantic-release-maven-gradle-nodejs-python-git-jq:${{ steps.semantic_release.outputs.new_release_version }}
