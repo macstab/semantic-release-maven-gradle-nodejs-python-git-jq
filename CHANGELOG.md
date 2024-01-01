@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.4.0...v1.5.0) (2024-01-01)
+
+
+### Features
+
+* get the github release changes from the remote repo before the backmerge. ([ff88e40](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/ff88e40394993e7556d07d5b70816ee247f28da9))
+
 # [1.4.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.3.0...v1.4.0) (2024-01-01)
 
 
