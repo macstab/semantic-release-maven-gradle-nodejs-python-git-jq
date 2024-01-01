@@ -1,3 +1,38 @@
+## [1.6.1](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.6.0...v1.6.1) (2024-01-01)
+
+
+### Bug Fixes
+
+* correct backmerge. ([582ff41](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/582ff41f009fe1123c9e43276ebde9c45204f3b6))
+
+# [1.6.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.5.0...v1.6.0) (2024-01-01)
+
+
+### Features
+
+* removed backmerge by using external github action to merge main branch into develop ([47ddfeb](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/47ddfeb2e3668c9fac5ca7c54a253d07e1b72f50))
+
+# [1.5.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.4.0...v1.5.0) (2024-01-01)
+
+
+### Features
+
+* get the github release changes from the remote repo before the backmerge. ([ff88e40](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/ff88e40394993e7556d07d5b70816ee247f28da9))
+
+# [1.5.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.4.0...v1.5.0) (2024-01-01)
+
+
+### Features
+
+* get the github release changes from the remote repo before the backmerge. ([ff88e40](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/ff88e40394993e7556d07d5b70816ee247f28da9))
+
+# [1.4.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.3.0...v1.4.0) (2024-01-01)
+
+
+### Features
+
+* add concurrency for workflows ([#10](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/issues/10)) ([68abec6](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/68abec6e182de3b3a65fcfc1c7960499013310b3))
+
 # [1.3.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.2.0...v1.3.0) (2024-01-01)
 
 
