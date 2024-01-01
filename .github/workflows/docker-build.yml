@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - develop
   pull_request:
     branches:
       - main
@@ -14,7 +13,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - name: Set up Docker Build
         uses: docker/setup-buildx-action@v3
       - name: Login to DockerHub
@@ -22,24 +23,51 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-      - name: Build and push
-        uses: docker/build-push-action@v3
+      - name: Build docker image for test only
+        uses: docker/build-push-action@v5
         with:
           context: .
           file: ./Dockerfile
-          push: true
+          push: false
           tags: macstab/semantic-release-maven-gradle-nodejs-python-git-jq:latest
-      - uses: actions/checkout@v3
+          load: true
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.BOT_GITHUB_TOKEN }}
       - name: Semantic Release
+        id: semantic_release
         uses: docker://macstab/semantic-release-maven-gradle-nodejs-python-git-jq:latest
         with:
           entrypoint: /bin/sh
           workdir: /home/runner/work/${{ github.repository }}/${{ github.repository }}
           branches: 'main'
-          args: -c "echo 'test $NPM_TOKEN' && git config --global --add safe.directory /github/workspace && npx semantic-release --branches $RELEASE_BRANCH --config /configs/.releaserc-nobuild.json"
+          args: -c "cp /configs/$CONFIG_FILE .releaserc && git config --global --add safe.directory /github/workspace && npx semantic-release --branches $RELEASE_BRANCH"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_ENV: production
           GH_URL: https://github.com/${{ github.repository }}.git
           RELEASE_BRANCH: main
+          CONFIG_FILE: .releaserc-docker.json
+          DEBUG: semantic-release:*
+      - name: Get latest release
+        id: latest_release
+        uses: octokit/request-action@v2.x
+        with:
+          route: GET /repos/${{ github.repository }}/releases/latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and push docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: macstab/semantic-release-maven-gradle-nodejs-python-git-jq:${{ fromJson(steps.latest_release.outputs.data).tag_name }}
+#      - name: Build and push docker image
+#          uses: docker/build-push-action@v5
+#          with:
+#            context: .
+#            file: ./Dockerfile
+#            push: true
+#            tags: macstab/semantic-release-maven-gradle-nodejs-python-git-jq:${{ steps.semantic_release.outputs.new_release_version }}
