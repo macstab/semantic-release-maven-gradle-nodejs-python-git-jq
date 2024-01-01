@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.0.0...v1.1.0) (2024-01-01)
+
+
+### Features
+
+* allow dedicated docker image release for the docker file build. ([5eb3023](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/5eb3023824b60105135d6bdb21bab14332ca3888))
+
 # 1.0.0 (2023-12-31)
 
 
