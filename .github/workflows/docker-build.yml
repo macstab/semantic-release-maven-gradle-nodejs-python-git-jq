@@ -23,24 +23,19 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-      - name: Build and push
+      - name: Build docker image for test only
         uses: docker/build-push-action@v5
         with:
           context: .
           file: ./Dockerfile
-          push: true
+          push: false
           tags: macstab/semantic-release-maven-gradle-nodejs-python-git-jq:latest
-      - name: test token
-        uses: docker://macstab/semantic-release-maven-gradle-nodejs-python-git-jq:latest
-        with:
-          entrypoint: /bin/sh
-          args: -c "echo ${{ env.GITHUB_TOKEN }} | base64"
-        env:
-          GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN }}
+          load: true
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.BOT_GITHUB_TOKEN }}
       - name: Semantic Release
+        id: semantic_release
         uses: docker://macstab/semantic-release-maven-gradle-nodejs-python-git-jq:latest
         with:
           entrypoint: /bin/sh
@@ -55,3 +50,24 @@ jobs:
           RELEASE_BRANCH: main
           CONFIG_FILE: .releaserc-docker.json
           DEBUG: semantic-release:*
+      - name: Get latest release
+        id: latest_release
+        uses: octokit/request-action@v2.x
+        with:
+          route: GET /repos/${{ github.repository }}/releases/latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and push docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: macstab/semantic-release-maven-gradle-nodejs-python-git-jq:${{ fromJson(steps.latest_release.outputs.data).tag_name }}
+#      - name: Build and push docker image
+#          uses: docker/build-push-action@v5
+#          with:
+#            context: .
+#            file: ./Dockerfile
+#            push: true
+#            tags: macstab/semantic-release-maven-gradle-nodejs-python-git-jq:${{ steps.semantic_release.outputs.new_release_version }}
