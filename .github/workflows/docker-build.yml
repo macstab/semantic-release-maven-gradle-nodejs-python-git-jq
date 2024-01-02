@@ -40,7 +40,7 @@ jobs:
           token: ${{ secrets.BOT_GITHUB_TOKEN }}
       - name: Semantic Release
         id: semantic_release
-        uses: docker://macstab/semantic-release-maven-gradle-nodejs-python-git-jq:v1.6.2
+        uses: docker://macstab/semantic-release-maven-gradle-nodejs-python-git-jq:v1.6.3
         with:
           entrypoint: /bin/sh
           workdir: /home/runner/work/${{ github.repository }}/${{ github.repository }}
@@ -62,7 +62,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: merge main -> develop
-        uses: docker://macstab/semantic-release-maven-gradle-nodejs-python-git-jq:v1.6.2
+        uses: docker://macstab/semantic-release-maven-gradle-nodejs-python-git-jq:v1.6.3
         with:
           entrypoint: /bin/sh
           workdir: /home/runner/work/${{ github.repository }}/${{ github.repository }}
