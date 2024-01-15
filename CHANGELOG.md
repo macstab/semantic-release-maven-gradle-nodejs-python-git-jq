@@ -26,6 +26,13 @@
 
 * improve tag handling for commit message to improve runtime. ([64460ad](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/64460adf77945b800dea5c20d5b84185b2a2ebce))
 
+# [1.9.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.8.0...v1.9.0) (2024-01-15)
+
+
+### Features
+
+* improve tag handling for commit message to improve runtime. ([64460ad](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/64460adf77945b800dea5c20d5b84185b2a2ebce))
+
 # [1.8.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.7.0...v1.8.0) (2024-01-15)
 
 
