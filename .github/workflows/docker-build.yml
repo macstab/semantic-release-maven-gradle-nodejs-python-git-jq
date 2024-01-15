@@ -109,11 +109,10 @@ jobs:
         with:
           entrypoint: /bin/sh
           workdir: /home/runner/work/${{ github.repository }}/${{ github.repository }}
-          args: "-c \"set -x && git config --global --add safe.directory /github/workspace && git config --global user.email '${{ secrets.BOT_USER_EMAIL }}' && git config --global user.name '${{ secrets.BOT_USER_NAME }}' && git fetch -a origin && git fetch origin ${INPUT_FROM_BRANCH} && git checkout ${INPUT_FROM_BRANCH} && git fetch origin ${INPUT_TARGET_BRANCH} && git checkout ${INPUT_TARGET_BRANCH} && git pull && git merge --no-ff -m 'chore(release): ${GITHUB_REF#refs/tags/} merge main to develop' ${INPUT_FROM_BRANCH} && git push\""
+          args: "-c \"set -x && TAG_NAME=${GITHUB_REF#refs/tags/} && echo Release is $TAG_NAME && git config --global --add safe.directory /github/workspace && git config --global user.email '${{ secrets.BOT_USER_EMAIL }}' && git config --global user.name '${{ secrets.BOT_USER_NAME }}' && git fetch -a origin && git fetch origin ${INPUT_FROM_BRANCH} && git checkout ${INPUT_FROM_BRANCH} && git fetch origin ${INPUT_TARGET_BRANCH} && git checkout ${INPUT_TARGET_BRANCH} && git pull && git merge --no-ff -m 'chore(release): ${TAG_NAME} merge main to develop' ${INPUT_FROM_BRANCH} && git push\""
         env:
           INPUT_FROM_BRANCH: 'main'
           INPUT_TARGET_BRANCH: 'develop'
-
       # Step 10: Build and push docker image (only on main branch)
       - name: Build and push docker image
         if: steps.check_commit.outputs.skip == 'false' && github.ref == 'refs/heads/main'
