@@ -37,16 +37,16 @@ jobs:
           commit_message=$(git log --format=%B -n 1 ${{ github.event.after }})
           if [[ "$commit_message" == "chore(release):"* ]]; then
             echo "Commit message is a release commit. Skipping build."
-            echo echo "skip=true" >> $GITHUB_OUTPUT
+            echo "skip=true" >> $GITHUB_OUTPUT
           else
             echo "Commit message is not a release commit. Proceeding with build."
-            echo echo "skip=false" >> $GITHUB_OUTPUT
+            echo "skip=false" >> $GITHUB_OUTPUT
           fi
-
       # Step 3: Set up Docker Build
       - name: Set up Docker Build
         uses: docker/setup-buildx-action@v3
         if: steps.check_commit.outputs.skip == 'false'
+
 
       # Step 4: Login to DockerHub (if not a tag)
       - name: Login to DockerHub
