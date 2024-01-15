@@ -1,3 +1,10 @@
+## [1.6.4](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.6.3...v1.6.4) (2024-01-15)
+
+
+### Bug Fixes
+
+* removing backmerge as this is problematic due to the permissions. ([b1d1c0a](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/b1d1c0a65b295e4d63408bdbb39875a6b9164eec))
+
 ## [1.6.3](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.6.2...v1.6.3) (2024-01-01)
 
 ## [1.6.2](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.6.1...v1.6.2) (2024-01-01)
