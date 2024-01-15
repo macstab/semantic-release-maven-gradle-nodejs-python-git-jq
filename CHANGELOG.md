@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.11.0...v1.11.1) (2024-01-15)
+
+
+### Bug Fixes
+
+* correcting update of after release merge main to develop ([a4eb09b](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/a4eb09b6a0c2fd00e9ef784a0c604f3158f24bbe))
+
 # [1.11.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.10.0...v1.11.0) (2024-01-15)
 
 
