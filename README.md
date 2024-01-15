@@ -51,9 +51,7 @@ The image also includes additional tools to support a wide range of development 
 
 Proper version management is essential for the stability and reliability of the development environment. This section outlines the strategies for managing and updating the versions of dependencies and tools within the Docker image.
 
-
 ---
-
 
 # Chapter 3: Installed Tools Overview
 
