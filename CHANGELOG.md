@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.7.0...v1.8.0) (2024-01-15)
+
+
+### Features
+
+* only use pipeline docker builds when required ([458d84b](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/458d84b92112401c672162f50f65ae4a3376e79d))
+
 # [1.7.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.6.4...v1.7.0) (2024-01-15)
 
 
