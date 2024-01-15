@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.9.0...v1.10.0) (2024-01-15)
+
+
+### Features
+
+* skip the ci build on the version update commit. ([252610f](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/252610fa7bd24c8f682c5c5a75399d140aea6253))
+
 # [1.9.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.8.0...v1.9.0) (2024-01-15)
 
 
