@@ -1,3 +1,10 @@
+## [1.11.6](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.11.5...v1.11.6) (2024-01-15)
+
+
+### Bug Fixes
+
+* override unrelated histories ([aee7b3e](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/aee7b3ed34cda15a6952406076867d4386f8cca8))
+
 ## [1.11.5](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.11.4...v1.11.5) (2024-01-15)
 
 
