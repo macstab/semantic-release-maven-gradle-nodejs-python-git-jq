@@ -1,3 +1,103 @@
+## [1.11.4](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.11.3...v1.11.4) (2024-01-15)
+
+
+### Bug Fixes
+
+* correct from branch in backmerge ([259b829](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/259b829d0924056ddb6d9feb49c3bba1c2db59c0))
+
+## [1.11.3](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.11.2...v1.11.3) (2024-01-15)
+
+
+### Bug Fixes
+
+* minor error in backmerge ([cd5c8d9](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/cd5c8d930bed035c63f1caedaecd48aa410fe6b1))
+
+## [1.11.2](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.11.1...v1.11.2) (2024-01-15)
+
+
+### Bug Fixes
+
+* correct detection for release commits ([df7951a](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/df7951ae4b49b6296ce7b6fdc3ee35cf610d3b2c))
+* correct detection for release commits ([b16a88f](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/b16a88fa57a43f01226ae0f7b5aacf8709f95da4))
+
+## [1.11.1](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.11.0...v1.11.1) (2024-01-15)
+
+
+### Bug Fixes
+
+* correcting update of after release merge main to develop ([a4eb09b](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/a4eb09b6a0c2fd00e9ef784a0c604f3158f24bbe))
+
+# [1.11.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.10.0...v1.11.0) (2024-01-15)
+
+
+### Features
+
+* improved analysis for skipping main order release commits. ([223dfe6](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/223dfe616e4e3ceaab99971e5612b6f9474f8fdb))
+* skip release jobs in ci. ([5959928](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/5959928e814343d7c7c570779f60b0b0fae1796b))
+
+# [1.10.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.9.0...v1.10.0) (2024-01-15)
+
+
+### Features
+
+* skip the ci build on the version update commit. ([252610f](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/252610fa7bd24c8f682c5c5a75399d140aea6253))
+
+# [1.9.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.8.0...v1.9.0) (2024-01-15)
+
+
+### Features
+
+* improve tag handling for commit message to improve runtime. ([64460ad](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/64460adf77945b800dea5c20d5b84185b2a2ebce))
+
+# [1.9.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.8.0...v1.9.0) (2024-01-15)
+
+
+### Features
+
+* improve tag handling for commit message to improve runtime. ([64460ad](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/64460adf77945b800dea5c20d5b84185b2a2ebce))
+
+# [1.9.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.8.0...v1.9.0) (2024-01-15)
+
+
+### Features
+
+* improve tag handling for commit message to improve runtime. ([64460ad](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/64460adf77945b800dea5c20d5b84185b2a2ebce))
+
+# [1.9.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.8.0...v1.9.0) (2024-01-15)
+
+
+### Features
+
+* improve tag handling for commit message to improve runtime. ([64460ad](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/64460adf77945b800dea5c20d5b84185b2a2ebce))
+
+# [1.9.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.8.0...v1.9.0) (2024-01-15)
+
+
+### Features
+
+* improve tag handling for commit message to improve runtime. ([64460ad](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/64460adf77945b800dea5c20d5b84185b2a2ebce))
+
+# [1.9.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.8.0...v1.9.0) (2024-01-15)
+
+
+### Features
+
+* improve tag handling for commit message to improve runtime. ([64460ad](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/64460adf77945b800dea5c20d5b84185b2a2ebce))
+
+# [1.9.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.8.0...v1.9.0) (2024-01-15)
+
+
+### Features
+
+* improve tag handling for commit message to improve runtime. ([64460ad](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/64460adf77945b800dea5c20d5b84185b2a2ebce))
+
+# [1.8.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.7.0...v1.8.0) (2024-01-15)
+
+
+### Features
+
+* only use pipeline docker builds when required ([458d84b](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/458d84b92112401c672162f50f65ae4a3376e79d))
+
 # [1.7.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.6.4...v1.7.0) (2024-01-15)
 
 
