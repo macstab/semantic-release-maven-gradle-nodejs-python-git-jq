@@ -1,8 +1,5 @@
 name: Docker Image CI
 
-env:
-  DEST_DOCKER_IMAGE: macstab/semantic-release-maven-gradle-nodejs-python-git-jq
-
 on:
   push:
     branches:
@@ -21,7 +18,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env:
+      DEST_DOCKER_IMAGE: macstab/semantic-release-maven-gradle-nodejs-python-git-jq
     steps:
       - uses: actions/checkout@v4
         with:
@@ -69,7 +67,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: merge main -> develop
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
-        uses: docker://${{ env.DEST_DOCKER_IMAGE }}:v1.6.2
+        uses: docker://macstab/semantic-release-maven-gradle-nodejs-python-git-jq:v1.6.2
         with:
           entrypoint: /bin/sh
           workdir: /home/runner/work/${{ github.repository }}/${{ github.repository }}
