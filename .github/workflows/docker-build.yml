@@ -33,11 +33,14 @@ jobs:
         if: ${{ !startsWith(github.ref, 'refs/tags/') }}
         id: check_commit
         run: |
+          git pull
           commit_message=$(git log --format=%B -n 1 ${{ github.event.after }})
-          if [[ "$commit_message" =~ "^chore(release):.*" ]]; then
-            echo "::set-output name=skip::true"
+          if [[ "$commit_message" == "chore(release):"* ]]; then
+            echo "Commit message is a release commit. Skipping build."
+            echo echo "skip=true" >> $GITHUB_OUTPUT
           else
-            echo "::set-output name=skip::false"
+            echo "Commit message is not a release commit. Proceeding with build."
+            echo echo "skip=false" >> $GITHUB_OUTPUT
           fi
 
       # Step 3: Set up Docker Build
