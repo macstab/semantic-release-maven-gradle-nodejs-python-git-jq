@@ -1,3 +1,15 @@
+# [1.7.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.6.4...v1.7.0) (2024-01-15)
+
+
+### Bug Fixes
+
+* correct pipeline env definition ([0bf5300](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/0bf5300c7e371a6828de7e88bdc6d02205d35dd0))
+
+
+### Features
+
+* add develop branch builds and improved structure. ([e04f4f7](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/e04f4f795003055ee036d868cdce8b420b10a3f1))
+
 ## [1.6.4](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.6.3...v1.6.4) (2024-01-15)
 
 
