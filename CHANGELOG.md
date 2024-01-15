@@ -1,3 +1,11 @@
+# [1.11.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.10.0...v1.11.0) (2024-01-15)
+
+
+### Features
+
+* improved analysis for skipping main order release commits. ([223dfe6](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/223dfe616e4e3ceaab99971e5612b6f9474f8fdb))
+* skip release jobs in ci. ([5959928](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/5959928e814343d7c7c570779f60b0b0fae1796b))
+
 # [1.10.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.9.0...v1.10.0) (2024-01-15)
 
 
