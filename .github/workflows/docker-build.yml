@@ -77,8 +77,8 @@ jobs:
           workdir: /home/runner/work/${{ github.repository }}/${{ github.repository }}
           args: "-c \"set -x && git config --global --add safe.directory /github/workspace && git config --global user.email '${{ secrets.BOT_USER_EMAIL }}' && git config --global user.name '${{ secrets.BOT_USER_NAME }}' && git fetch -a origin && git checkout ${INPUT_TARGET_BRANCH} && git pull && git merge --no-ff -m 'chore(release): ${GITHUB_REF#refs/tags/} merge main to develop' ${INPUT_FROM_BRANCH} && git push\""
         env:
-          INPUT_FROM_BRANCH: 'main'
-          INPUT_TARGET_BRANCH: 'develop'
+          INPUT_FROM_BRANCH: 'origin/main'
+          INPUT_TARGET_BRANCH: 'origin/develop'
       # Do not build on tags. Only build on main
       - name: Build and push docker image
         if: github.ref == 'refs/heads/main'
