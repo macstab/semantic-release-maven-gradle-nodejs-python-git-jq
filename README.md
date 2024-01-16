@@ -356,7 +356,7 @@ Each profile is tailored to suit the specific needs of different development env
 - **Key Features**: Commit message analysis, changelog generation, version management tailored for Gradle.
 - **Example Usage**:
   ```dockerfile
-    SEMANTIC_RELEASE_CONFIG=/configs/.releaserc-gradle.json semantic-release
+    SEMANTIC_RELEASE_CONFIG=/configs/.releaserc-gradle.json
   ```
 
 ### Maven Profile
@@ -392,7 +392,7 @@ Each profile is tailored to suit the specific needs of different development env
 
 - **Overview**: Configured for no build tool projects.
 - **Key Features**: Supports Releases and tags.
-- **Comment**: The package json is just forconvinienve to run semantic-release. It is not used for release.
+- **Comment**: The package json is just for convenience to run semantic-release. It is not used for release.
 - **Example Usage**:
   ```shell
     docker run your-docker-image semantic-release --config /configs/.releaserc-docker.json 
