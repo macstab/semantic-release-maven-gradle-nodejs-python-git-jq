@@ -1,3 +1,15 @@
+# [1.12.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.11.7...v1.12.0) (2024-01-16)
+
+
+### Bug Fixes
+
+* correct checkout with full history ([ab57f30](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/ab57f30f942594f500f56d74255867e78cc39619))
+
+
+### Features
+
+* clean up repo ([#13](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/issues/13)) ([f1e58e7](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/f1e58e74978cc0ccbdaedfd1d1365725ace363cd)), closes [#12](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/issues/12)
+
 ## [1.11.7](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.11.6...v1.11.7) (2024-01-16)
 
 
