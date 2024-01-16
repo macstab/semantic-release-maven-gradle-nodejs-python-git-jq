@@ -1,3 +1,10 @@
+## [1.11.7](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.11.6...v1.11.7) (2024-01-16)
+
+
+### Bug Fixes
+
+* back merge dynamic name ([5b6e7d2](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/5b6e7d2dfef6950d0f3f650c85101b44075359a3))
+
 ## [1.11.6](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.11.5...v1.11.6) (2024-01-15)
 
 
