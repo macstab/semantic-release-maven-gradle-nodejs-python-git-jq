@@ -1,3 +1,43 @@
+## [1.13.1](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.13.0...v1.13.1) (2024-01-16)
+
+# [1.13.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.12.0...v1.13.0) (2024-01-16)
+
+
+### Features
+
+* add npm token ([df1b453](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/df1b45302c388dbfdd170386fd691f33d362e666))
+* add npm token ([e6a9b75](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/e6a9b75c36a28c064a8dbf9b897f6fa6b77f9632))
+* disable npm release ([fb74d26](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/fb74d26bbdef9fdd7ff1cbaf41793660bfd0c50c))
+* enable npm step to increase the version in release step as well ([be3d361](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/be3d3610931d57fb8351c7800216d44f6077d051))
+* enable npm step to increase the version in release step for the npm package.json as well ([87521ac](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/87521acdcba38ba18dcd298dad95e34d878423e6))
+* only allow one workflow at a time. ([a88462c](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/a88462cd9d4e16fa704f8669a076f07e0222c7e5))
+
+# [1.12.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.11.7...v1.12.0) (2024-01-16)
+
+
+### Bug Fixes
+
+* correct checkout with full history ([ab57f30](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/ab57f30f942594f500f56d74255867e78cc39619))
+
+
+### Features
+
+* clean up repo ([#13](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/issues/13)) ([f1e58e7](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/f1e58e74978cc0ccbdaedfd1d1365725ace363cd)), closes [#12](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/issues/12)
+
+## [1.11.7](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.11.6...v1.11.7) (2024-01-16)
+
+
+### Bug Fixes
+
+* back merge dynamic name ([5b6e7d2](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/5b6e7d2dfef6950d0f3f650c85101b44075359a3))
+
+## [1.11.6](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.11.5...v1.11.6) (2024-01-15)
+
+
+### Bug Fixes
+
+* override unrelated histories ([aee7b3e](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/aee7b3ed34cda15a6952406076867d4386f8cca8))
+
 ## [1.11.5](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.11.4...v1.11.5) (2024-01-15)
 
 
