@@ -1,0 +1,13 @@
+{
+  "name": "semantic-release-github",
+  "version": "1.13.0",
+  "description": "Docker image to publish releases to GitHub with semantic-release",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq.git"
+  },
+  "bugs": {
+    "url": "https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/issues"
+  },
+  "homepage": "https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq#readme"
+}
