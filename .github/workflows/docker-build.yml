@@ -107,6 +107,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Step 9: Merge main branch into develop branch (on tag event)
+      # Already given by default !!!!
       - name: Merge main -> develop
         if: ${{ !startsWith(github.ref, 'refs/tags/') && github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
         uses: docker://macstab/semantic-release-maven-gradle-nodejs-python-git-jq:v1.6.2

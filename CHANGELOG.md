@@ -1,3 +1,15 @@
+# 1.0.0 (2024-01-16)
+
+
+### Bug Fixes
+
+* correct steps for pull requests. ([de91354](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/de91354e7e058bf6ab36d5b5e93263a520ead59d))
+
+
+### Features
+
+* initial build of the image and build ([5c737b0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/5c737b0708cf4f003941b620e879842f38e1666d))
+
 # [1.13.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.12.0...v1.13.0) (2024-01-16)
 
 
