@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.0.0...v1.0.1) (2024-01-16)
+
+
+### Bug Fixes
+
+* allow empty commits ([8278141](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/82781419f3d31855f3b46351b619f03d9579a151))
+
 # 1.0.0 (2024-01-16)
 
 
@@ -38,4 +45,3 @@
 * integrate semantic-release into pipeline. ([2f3f8de](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/2f3f8de2f57dc40ba0eb5c9c84f84c1c39b1ad66))
 * use ALTERNATE_GITHUB_TOKEN env var as GITHUB_TOKEN only, if it is set. ([5f4286b](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/5f4286b1c2d4cd017318d5a85c0bf95c3b2a899e))
 * use BOT_GITHUB_TOKEN env var as GITHUB_TOKEN only, if it is set. ([a9788a6](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/a9788a6130e6083338aa7603e96b027252ae5a21))
-
