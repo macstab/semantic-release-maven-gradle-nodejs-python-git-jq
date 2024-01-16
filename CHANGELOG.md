@@ -1,3 +1,15 @@
+# [1.13.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.12.0...v1.13.0) (2024-01-16)
+
+
+### Features
+
+* add npm token ([df1b453](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/df1b45302c388dbfdd170386fd691f33d362e666))
+* add npm token ([e6a9b75](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/e6a9b75c36a28c064a8dbf9b897f6fa6b77f9632))
+* disable npm release ([fb74d26](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/fb74d26bbdef9fdd7ff1cbaf41793660bfd0c50c))
+* enable npm step to increase the version in release step as well ([be3d361](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/be3d3610931d57fb8351c7800216d44f6077d051))
+* enable npm step to increase the version in release step for the npm package.json as well ([87521ac](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/87521acdcba38ba18dcd298dad95e34d878423e6))
+* only allow one workflow at a time. ([a88462c](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/a88462cd9d4e16fa704f8669a076f07e0222c7e5))
+
 # [1.12.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.11.7...v1.12.0) (2024-01-16)
 
 
