@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.0.2...v1.1.0) (2024-01-19)
+
+
+### Features
+
+* change the version to a prefix less style ([9f3b2b7](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/9f3b2b72435f926dd6584fd7c70916460d08cf66))
+
 ## [1.0.2](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/v1.0.1...v1.0.2) (2024-01-16)
 
 
