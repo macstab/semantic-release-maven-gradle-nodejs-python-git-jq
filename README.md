@@ -356,7 +356,7 @@ Each profile is tailored to suit the specific needs of different development env
 - **Key Features**: Commit message analysis, changelog generation, version management tailored for Gradle.
 - **Example Usage**:
   ```dockerfile
-    SEMANTIC_RELEASE_CONFIG=/configs/.releaserc-gradle.json semantic-release
+    SEMANTIC_RELEASE_CONFIG=/configs/.releaserc-gradle.json
   ```
 
 ### Maven Profile
@@ -365,7 +365,8 @@ Each profile is tailored to suit the specific needs of different development env
 - **Key Features**: Integration with Maven's lifecycle, commit analysis, and Maven-specific release processes.
 - **Example Usage**:
   ```shell
-    semantic-release --config /configs/.releaserc-maven.json
+        docker run -v "$(pwd)":/workspace --platform linux/amd64 macstab/semantic-release-maven-gradle-nodejs-python-git-jq:1.1.1 /bin/bash -c "cp /configs/.releaserc-maven.json .releaserc && cd /workspace && semantic-release"
+
   ```
 
 
@@ -375,7 +376,8 @@ Each profile is tailored to suit the specific needs of different development env
 - **Key Features**: NPM publishing, commit message analysis, and automated release notes generation.
 - **Example Usage**:
   ```shell
-    docker run -e SEMANTIC_RELEASE_CONFIG=/configs/.releaserc-js.json your-docker-image semantic-release
+        docker run -v "$(pwd)":/workspace --platform linux/amd64 macstab/semantic-release-maven-gradle-nodejs-python-git-jq:1.1.1 /bin/bash -c "cp /configs/.releaserc-js.json .releaserc && cd /workspace && semantic-release"
+
   ```
 
 
@@ -385,7 +387,8 @@ Each profile is tailored to suit the specific needs of different development env
 - **Key Features**: Supports Python package versioning, PyPI publishing, and Python-specific release workflows.
 - **Example Usage**:
   ```shell
-    docker run your-docker-image semantic-release --config /configs/.releaserc-python.json 
+        docker run -v "$(pwd)":/workspace --platform linux/amd64 macstab/semantic-release-maven-gradle-nodejs-python-git-jq:1.1.1 /bin/bash -c "cp /configs/.releaserc-python.json .releaserc && cd /workspace && semantic-release"
+
   ```  
 
 ### Profile for no build tools (i.e. docker images, configurations, infrastructure as code, etc.)
@@ -395,7 +398,7 @@ Each profile is tailored to suit the specific needs of different development env
 - **Comment**: The package json is just forconvinienve to run semantic-release. It is not used for release.
 - **Example Usage**:
   ```shell
-    docker run your-docker-image semantic-release --config /configs/.releaserc-docker.json 
+    docker run -v "$(pwd)":/workspace --platform linux/amd64 macstab/semantic-release-maven-gradle-nodejs-python-git-jq:1.1.1 /bin/bash -c "cp /configs/.releaserc-docker.json .releaserc && cd /workspace && semantic-release"
   ```  
 
 This chapter provides a guide on how to use the predefined Semantic-Release profiles for different development environments and includes basic usage examples. You can further expand each section with more detailed information, specific customization guidelines, and additional examples as needed.
