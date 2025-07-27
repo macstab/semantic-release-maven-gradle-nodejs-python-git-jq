@@ -10,14 +10,14 @@ LABEL maintainer="Nolem / Per! <schnapka.christian@googlemail.com>"
 # - /configs/.releaserc-gradle.json
 # Besides this you can declare your own configuration file and mount it to the container.
 ENV SEMANTIC_RELEASE_CONFIG=/configs/.releaserc-js.json
-ENV JAVA_HOME /opt/java/openjdk
-ENV PATH $JAVA_HOME/bin:$PATH
+ENV JAVA_HOME=/opt/java/openjdk
+ENV PATH=$JAVA_HOME/bin:$PATH
 ENV MAVEN_VERSION=3.9.6
 ENV GRADLE_VERSION=8.5
-ENV MAVEN_HOME /usr/share/maven
-ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
-ENV GRADLE_HOME /opt/gradle/gradle
-ENV PATH $PATH:$GRADLE_HOME/bin
+ENV MAVEN_HOME=/usr/share/maven
+ENV MAVEN_CONFIG="$USER_HOME_DIR/.m2"
+ENV GRADLE_HOME=/opt/gradle/gradle
+ENV PATH=$PATH:$GRADLE_HOME/bin
 
 # Install required packages for java environment
 RUN apt-get update \
@@ -50,12 +50,12 @@ RUN set -eux; \
     ARCH="$(dpkg --print-architecture)"; \
     case "${ARCH}" in \
        aarch64|arm64) \
-         ESUM='33e440c237438aa2e3866d84ead8d4e00dc0992d98d9fd0ee2fe48192f2dbc4b'; \
-         BINARY_URL='https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21%2B35/OpenJDK21U-jdk_aarch64_linux_hotspot_21_35.tar.gz'; \
+         ESUM='6f8725d186d05c627176db9c46c732a6ef3ba41d9e9b3775c4727fc8ac642bb2'; \
+         BINARY_URL='https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24.0.2%2B12/OpenJDK24U-jdk_aarch64_linux_hotspot_24.0.2_12.tar.gz'; \
          ;; \
        amd64|i386:x86-64) \
-         ESUM='82f64c53acaa045370d6762ebd7441b74e6fda14b464d54d1ff8ca941ec069e6'; \
-         BINARY_URL='https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21%2B35/OpenJDK21U-jdk_x64_linux_hotspot_21_35.tar.gz'; \
+         ESUM='aea1cc55e51cf651c85f2f00ad021603fe269c4bb6493fa97a321ad770c9b096'; \
+         BINARY_URL='https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24.0.2%2B12/OpenJDK24U-jdk_x64_linux_hotspot_24.0.2_12.tar.gz'; \
          ;; \
        *) \
          echo "Unsupported arch: ${ARCH}"; \
