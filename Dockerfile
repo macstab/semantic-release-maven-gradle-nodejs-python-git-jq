@@ -30,7 +30,7 @@ RUN apt-get update \
 # Install global packages and clean cache in a single layer to reduce image size
 # The --save-dev and -D flags are not necessary for global installs
 # Also, it's unusual to run semantic-release during the build, as it's typically run in CI/CD pipelines
-RUN npm install -g semantic-release@21.0.2 \
+RUN npm install -g semantic-release@24.2.7 \
     @semantic-release/git \
     @semantic-release/changelog \
     @semantic-release/release-notes-generator@11.0.7 \
