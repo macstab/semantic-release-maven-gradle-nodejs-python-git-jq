@@ -1,3 +1,5 @@
+## [1.1.5](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/1.1.4...1.1.5) (2025-08-02)
+
 ## [1.1.4](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/1.1.3...1.1.4) (2025-07-27)
 
 ## [1.1.3](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/1.1.2...1.1.3) (2025-07-27)
