@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/1.1.5...1.2.0) (2025-08-03)
+
+
+### Features
+
+* **deps:** using base with python 1.13 and nodejs 23 +  jdk24 and many more. gradle 8.14.3 and maven 3.9.9 ([#35](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/issues/35)) ([76671b3](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/76671b361760d15787a4458a441da1d56d0d5303)), closes [#30](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/issues/30)
+
 ## [1.1.5](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/1.1.4...1.1.5) (2025-08-02)
 
 ## [1.1.4](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/1.1.3...1.1.4) (2025-07-27)
