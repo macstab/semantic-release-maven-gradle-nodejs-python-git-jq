@@ -1,5 +1,5 @@
 # Set the base image for semantic release. Only node is needed.
-FROM macstab/nodejs-tools-git-jq-python:1.2.2
+FROM macstab/nodejs-tools-git-jq-python:1.3.0
 LABEL maintainer="Nolem / Per! <schnapka.christian@googlemail.com>"
 
 # By the environment varianle SEMANTIC_RELEASE_CONFIG the semantic-release configuration can be overwritten. This is
@@ -15,7 +15,7 @@ ENV PATH=$JAVA_HOME/bin:$PATH
 ENV MAVEN_VERSION=3.9.9
 ENV GRADLE_VERSION=8.14.3
 ENV MAVEN_HOME=/usr/share/maven
-ENV MAVEN_CONFIG="$USER_HOME_DIR/.m2"
+ENV MAVEN_CONFIG="/root/.m2"
 ENV GRADLE_HOME=/opt/gradle/gradle
 ENV PATH=$PATH:$GRADLE_HOME/bin
 
@@ -97,10 +97,16 @@ RUN echo Verifying install ... \
       && rm -f /tmp/apache-maven.tar.gz \
       && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn; \
     echo "installing gradle ${GRADLE_VERSION}"; \
-    wget -O /tmp/gradle.zip "https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip" \
-      && unzip /tmp/gradle.zip -d /opt/gradle \
-      && rm /tmp/gradle.zip \
-      && ln -s /opt/gradle/gradle-${GRADLE_VERSION}/bin/gradle /usr/bin/gradle
+    wget -O /tmp/gradle-${GRADLE_VERSION}-bin.zip "https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip" \
+      && unzip /tmp/gradle-${GRADLE_VERSION}-bin.zip -d /opt/gradle \
+      && ln -s /opt/gradle/gradle-${GRADLE_VERSION}/bin/gradle /usr/bin/gradle; \
+    echo "pre-populating gradle wrapper cache"; \
+    GRADLE_HASH=$(python3 -c "import hashlib,sys;a='0123456789abcdefghijklmnopqrstuvwxyz';n=int.from_bytes(hashlib.md5(sys.argv[1].encode()).digest(),'big');r='';exec('while n:r=a[n%36]+r;n//=36');print(r or '0')" "https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip") && \
+    mkdir -p /root/.gradle/wrapper/dists/gradle-${GRADLE_VERSION}-bin/${GRADLE_HASH} && \
+    cp /tmp/gradle-${GRADLE_VERSION}-bin.zip /root/.gradle/wrapper/dists/gradle-${GRADLE_VERSION}-bin/${GRADLE_HASH}/ && \
+    cd /root/.gradle/wrapper/dists/gradle-${GRADLE_VERSION}-bin/${GRADLE_HASH} && \
+    unzip -q gradle-${GRADLE_VERSION}-bin.zip && \
+    rm /tmp/gradle-${GRADLE_VERSION}-bin.zip
 
 
 CMD ["sh"]

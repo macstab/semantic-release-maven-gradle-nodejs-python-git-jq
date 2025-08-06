@@ -64,9 +64,9 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
+          platforms: linux/amd64,linux/arm64
           push: false
           tags: ${{ env.DEST_DOCKER_IMAGE }}:v0.0.0
-          load: true
 
       # Step 6: Checkout code again with a bot token
       - name: Checkout code with bot token
@@ -123,6 +123,7 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ env.DEST_DOCKER_IMAGE }}:${{ fromJson(steps.latest_release.outputs.data).tag_name }}
 
@@ -133,5 +134,6 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ env.DEST_DOCKER_IMAGE }}:develop-${{ github.sha }}
