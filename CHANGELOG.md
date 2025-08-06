@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/1.2.0...1.3.0) (2025-08-06)
+
+
+### Features
+
+* **multi-arch:** multi architecture for linux amd64 and arm systems. added last versions and implemented internal gradle wrapper hash calcualtion to prevent download of grade when utitlizing a gradle wrapper and using docker image gradle instead. ([#37](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/issues/37)) ([ddfd5de](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/ddfd5de9abe8261b614ed44dda75b058bd3123fc)), closes [#30](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/issues/30)
+
 # [1.2.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/1.1.5...1.2.0) (2025-08-03)
 
 
