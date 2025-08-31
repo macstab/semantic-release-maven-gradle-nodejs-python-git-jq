@@ -6,7 +6,7 @@ on:
     types: [completed]
 
 env:
-  DEST_DOCKER_IMAGE: macstab/nodejs-tools-git-jq-python
+  DEST_DOCKER_IMAGE: macstab/semantic-release-maven-gradle-nodejs-python-git-jq
 
 jobs:
   squash:
@@ -76,6 +76,16 @@ jobs:
           cat > Dockerfile.slim <<'EOF'
           ARG BASE
           FROM ${BASE}
+          ENV SEMANTIC_RELEASE_CONFIG=/configs/.releaserc-js.json \
+              JAVA_HOME=/opt/java/openjdk \
+              PATH=$JAVA_HOME/bin:$PATH \
+              MAVEN_VERSION=3.9.9 \
+              GRADLE_VERSION=8.14.3 \
+              MAVEN_HOME=/usr/share/maven \
+              MAVEN_CONFIG="/root/.m2" \
+              GRADLE_HOME=/opt/gradle/gradle \
+              PATH=$PATH:$GRADLE_HOME/bin
+          CMD ["sh"]
           EOF
           docker build \
             --build-arg BASE=${DEST_DOCKER_IMAGE}:${TAG}-slim-${ARCH} \
