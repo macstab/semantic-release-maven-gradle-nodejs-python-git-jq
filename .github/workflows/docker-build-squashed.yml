@@ -2,7 +2,7 @@ name: Squash & Publish Slim Image
 
 on:
   workflow_run:
-    workflows: ["Docker Image CI"]
+    workflows: ["Multi-Arch Docker Image for Semantic Release Build and Release"]
     types: [completed]
 
 env:
