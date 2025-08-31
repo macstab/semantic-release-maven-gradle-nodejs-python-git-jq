@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Multi-Arch Docker Image for Semantic Release Build and Release
 
 on:
   push:
