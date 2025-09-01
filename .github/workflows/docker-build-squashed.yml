@@ -10,9 +10,9 @@ env:
 
 jobs:
   squash:
-    # Run only if original build succeeded AND was for main/develop (those are the runs that publish images)
+    # Run only if original build succeeded AND was for main (those are the runs that publish images)
     if: ${{ github.event.workflow_run.conclusion == 'success' &&
-      (github.event.workflow_run.head_branch == 'main' || github.event.workflow_run.head_branch == 'develop') }}
+      github.event.workflow_run.head_branch == 'main' }}
     runs-on: ubuntu-latest
     outputs:
       tag: ${{ steps.determine_tag.outputs.tag }}
@@ -73,22 +73,21 @@ jobs:
         run: |
           TAG=${{ steps.determine_tag.outputs.tag }}
           ARCH=${{ matrix.arch }}
-          cat > Dockerfile.slim <<'EOF'
-          ARG BASE
-          FROM ${BASE}
-          ENV SEMANTIC_RELEASE_CONFIG=/configs/.releaserc-js.json \
-              JAVA_HOME=/opt/java/openjdk \
-              PATH=$JAVA_HOME/bin:$PATH \
-              MAVEN_VERSION=3.9.9 \
-              GRADLE_VERSION=8.14.3 \
-              MAVEN_HOME=/usr/share/maven \
-              MAVEN_CONFIG="/root/.m2" \
-              GRADLE_HOME=/opt/gradle/gradle \
-              PATH=$PATH:$GRADLE_HOME/bin
+          cat > Dockerfile.slim <<EOF
+          FROM ${DEST_DOCKER_IMAGE}:${TAG}-${ARCH}
+          ENV SEMANTIC_RELEASE_CONFIG=/configs/.releaserc-js.json \\
+              JAVA_HOME=/opt/java/openjdk \\
+              PATH=\$JAVA_HOME/bin:\$PATH \\
+              MAVEN_VERSION=3.9.9 \\
+              GRADLE_VERSION=8.14.3 \\
+              MAVEN_HOME=/usr/share/maven \\
+              MAVEN_CONFIG="/root/.m2" \\
+              GRADLE_HOME=/opt/gradle/gradle \\
+              PATH=\$PATH:\$GRADLE_HOME/bin
           CMD ["sh"]
           EOF
           docker build \
-            --build-arg BASE=${DEST_DOCKER_IMAGE}:${TAG}-slim-${ARCH} \
+            --platform linux/${{ matrix.arch }} \
             -t ${DEST_DOCKER_IMAGE}:${TAG}-slim-${ARCH} \
             -f Dockerfile.slim .
 
