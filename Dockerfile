@@ -1,5 +1,5 @@
 # Set the base image for semantic release. Only node is needed.
-FROM macstab/nodejs-tools-git-jq-python:1.3.0
+FROM macstab/nodejs-tools-git-jq-python:1.7.0-slim
 LABEL maintainer="Nolem / Per! <schnapka.christian@googlemail.com>"
 
 # By the environment varianle SEMANTIC_RELEASE_CONFIG the semantic-release configuration can be overwritten. This is
