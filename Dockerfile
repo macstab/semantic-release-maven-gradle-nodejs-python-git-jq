@@ -1,5 +1,5 @@
 # Set the base image for semantic release. Only node is needed.
-FROM macstab/nodejs-tools-git-jq-python:1.7.0-slim
+FROM macstab/nodejs-tools-git-jq-python:1.9.0-slim
 LABEL maintainer="Nolem / Per! <schnapka.christian@googlemail.com>"
 
 # By the environment varianle SEMANTIC_RELEASE_CONFIG the semantic-release configuration can be overwritten. This is
@@ -13,7 +13,7 @@ ENV SEMANTIC_RELEASE_CONFIG=/configs/.releaserc-js.json
 ENV JAVA_HOME=/opt/java/openjdk
 ENV PATH=$JAVA_HOME/bin:$PATH
 ENV MAVEN_VERSION=3.9.9
-ENV GRADLE_VERSION=8.14.3
+ENV GRADLE_VERSION=9.3.0
 ENV MAVEN_HOME=/usr/share/maven
 ENV MAVEN_CONFIG="/root/.m2"
 ENV GRADLE_HOME=/opt/gradle/gradle
@@ -50,12 +50,12 @@ RUN set -eux; \
     ARCH="$(dpkg --print-architecture)"; \
     case "${ARCH}" in \
        aarch64|arm64) \
-         ESUM='6f8725d186d05c627176db9c46c732a6ef3ba41d9e9b3775c4727fc8ac642bb2'; \
-         BINARY_URL='https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24.0.2%2B12/OpenJDK24U-jdk_aarch64_linux_hotspot_24.0.2_12.tar.gz'; \
+         ESUM='5c83b7d2121ed482fd06831a1eba1633dbab818aba6addddf48e075b97e6e9b8'; \
+         BINARY_URL='https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.1%2B8/OpenJDK25U-jdk_aarch64_linux_hotspot_25.0.1_8.tar.gz'; \
          ;; \
        amd64|i386:x86-64) \
-         ESUM='aea1cc55e51cf651c85f2f00ad021603fe269c4bb6493fa97a321ad770c9b096'; \
-         BINARY_URL='https://github.com/adoptium/temurin24-binaries/releases/download/jdk-24.0.2%2B12/OpenJDK24U-jdk_x64_linux_hotspot_24.0.2_12.tar.gz'; \
+         ESUM='375a1f22ef1a488737330ea10bbc7418a1a49c5d0df36d4f59d18fd82fc63593'; \
+         BINARY_URL='https://github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.1%2B8/OpenJDK25U-jdk_x64_linux_hotspot_25.0.1_8.tar.gz'; \
          ;; \
        *) \
          echo "Unsupported arch: ${ARCH}"; \
