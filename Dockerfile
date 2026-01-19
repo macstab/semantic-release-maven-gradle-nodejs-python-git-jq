@@ -21,7 +21,7 @@ ENV PATH=$PATH:$GRADLE_HOME/bin
 
 # Install required packages for java environment
 RUN apt-get update \
-    && apt-get install -y tzdata curl wget ca-certificates fontconfig binutils dumb-init bash openssl libc6 libcurl4 libgcc-s1 unzip \
+    && apt-get install -y tzdata curl wget ca-certificates fontconfig binutils dumb-init bash openssl unzip \
     && ln -fs /usr/share/zoneinfo/Europe/Berlin /etc/localtime \
     && dpkg-reconfigure -f noninteractive tzdata \
     && apt-get clean \
