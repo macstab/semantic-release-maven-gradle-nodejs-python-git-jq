@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/1.3.1...1.4.0) (2026-01-19)
+
+
+### Features
+
+* enable multi architecture builds and images ([#42](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/issues/42)) ([1242730](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/12427304160a715104a8d915b282abcf48535596)), closes [#30](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/issues/30)
+
 ## [1.3.1](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/1.3.0...1.3.1) (2025-09-02)
 
 # [1.3.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/1.2.0...1.3.0) (2025-08-06)
