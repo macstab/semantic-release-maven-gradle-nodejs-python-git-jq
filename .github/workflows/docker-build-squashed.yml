@@ -82,16 +82,14 @@ jobs:
           cat > Dockerfile.slim <<EOF
           FROM ${DEST_DOCKER_IMAGE}:${TAG}-slim-base-${ARCH}
           ENV PNPM_HOME=/usr/local/pnpm \\
-              PATH=/usr/local/pnpm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \\
-              SEMANTIC_RELEASE_CONFIG=/configs/.releaserc-js.json \\
               JAVA_HOME=/opt/java/openjdk \\
-              PATH=\$JAVA_HOME/bin:\$PATH \\
               MAVEN_VERSION=3.9.9 \\
               GRADLE_VERSION=8.14.3 \\
               MAVEN_HOME=/usr/share/maven \\
               MAVEN_CONFIG="/root/.m2" \\
               GRADLE_HOME=/opt/gradle/gradle \\
-              PATH=\$PATH:\$GRADLE_HOME/bin
+              SEMANTIC_RELEASE_CONFIG=/configs/.releaserc-js.json \\
+              PATH=/opt/java/openjdk/bin:/opt/gradle/gradle/bin:/usr/local/pnpm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
           CMD ["node"]
           EOF
           docker build \
