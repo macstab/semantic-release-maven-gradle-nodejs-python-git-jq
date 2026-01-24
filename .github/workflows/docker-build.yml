@@ -138,6 +138,16 @@ jobs:
           push: true
           tags: ${{ env.DEST_DOCKER_IMAGE }}:${{ fromJson(steps.latest_release.outputs.data).tag_name }}-arm64
 
+      # Step 10b: Create multi-arch manifest
+      - name: Create multi-arch manifest
+        if: steps.check_commit.outputs.skip == 'false' && github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          TAG=${{ fromJson(steps.latest_release.outputs.data).tag_name }}
+          docker buildx imagetools create \
+            -t ${DEST_DOCKER_IMAGE}:${TAG} \
+            ${DEST_DOCKER_IMAGE}:${TAG}-amd64 \
+            ${DEST_DOCKER_IMAGE}:${TAG}-arm64
+
       # Step 11: Push to develop-hash tag (only on develop branch)
       - name: Push to develop-hash tag
         if: steps.check_commit.outputs.skip == 'false' && github.ref == 'refs/heads/develop' && github.event_name != 'pull_request'
