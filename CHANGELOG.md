@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/1.5.1...1.5.2) (2026-01-24)
+
+
+### Bug Fixes
+
+* **workflows:** consolidate PATH and ([#49](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/issues/49)) ([0d67484](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/0d67484dab990a698a79bb9303f583f7ae4acc0e)), closes [#30](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/issues/30)
+
 ## [1.5.1](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/1.5.0...1.5.1) (2026-01-24)
 
 
