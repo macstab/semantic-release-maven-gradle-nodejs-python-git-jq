@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/1.4.0...1.5.0) (2026-01-24)
+
+
+### Features
+
+* upgrade to latest tool versions ([#47](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/issues/47)) ([6c4fb41](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/6c4fb41518419dbddf93330a1a523528c86f10e9)), closes [#30](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/issues/30)
+
 # [1.4.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/1.3.1...1.4.0) (2026-01-19)
 
 
