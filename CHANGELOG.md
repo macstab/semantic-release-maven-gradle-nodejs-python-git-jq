@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/1.5.0...1.5.1) (2026-01-24)
+
+
+### Bug Fixes
+
+* **env:** fixing the env vars in the squashed images ([#48](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/issues/48)) ([b061134](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/commit/b061134cbc86bf278ec3f088f22ac2c4b095afc6)), closes [#30](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/issues/30)
+
 # [1.5.0](https://github.com/macstab/semantic-release-maven-gradle-nodejs-python-git-jq/compare/1.4.0...1.5.0) (2026-01-24)
 
 
